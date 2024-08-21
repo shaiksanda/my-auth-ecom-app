@@ -1,0 +1,28 @@
+.products-heading {
+    color: #475569;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .products-heading {
+      font-size: 32px;
+    }
+  }
+  
+  .products-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+  
+  .products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  

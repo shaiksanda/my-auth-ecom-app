@@ -1,0 +1,112 @@
+.product-item {
+    width: 100%; /* Ensures the item takes up the full width of the grid cell */
+    margin-bottom: 48px; /* Controls spacing between rows */
+  }
+  .thumbnail {
+    width: 100%;
+    max-height: 350px;
+    border-radius: 6px;
+  }
+  
+  .title {
+    color: #171f46;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .brand {
+    color: #594d6d;
+    font-family: 'Roboto';
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  
+  .product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2px;
+  }
+  
+  .price {
+    color: #171f46;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .rating-container {
+    display: flex;
+    align-items: center;
+    background-color: #3b82f6;
+    border-radius: 6px;
+    padding: 6px 16px;
+  }
+  
+  .rating {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .star {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 3px;
+  }
+  .card {
+    width: 100px;
+    height: 35px;
+    padding: 10px;
+    text-align: center;
+    background-color: wheat;
+    border-radius: 10px;
+    position: relative;
+    border: none;
+  }
+  
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .card::after,
+  .card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), white, green);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    border-radius: 10px;
+    animation: 1s move linear infinite;
+  }
+  
+  .card::before {
+    filter: blur(1.5 rem);
+    opacity: 1;
+  }
+  
+  @keyframes move {
+    from {
+      --angle: 0deg;
+    }
+  
+    to {
+      --angle: 360deg;
+    }
+  }
+  
